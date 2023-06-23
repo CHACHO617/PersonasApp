@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PersonasApp.Pages.ManagePersonaPage"
+             Title="ManagePersonaPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin"
+                    Value="0, 8, 0, 8"/>
+        </Style>
+    </ContentPage.Resources>
+
+
+    <VerticalStackLayout Margin="16">
+        <Label Text="Que desesas hacer?"/>
+        <Entry Text="{Binding Path=Persona.Nombre}" Placeholder="Ingresar Nombre" Keyboard="Default"/>
+        <Entry Text="{Binding Path=Persona.Cedula}" Placeholder="Ingresar Cedula" Keyboard="Numeric"/>
+        <Entry Text="{Binding Path=Persona.Telefono}" Placeholder="Ingresar Telefono" Keyboard="Telephone"/>
+        <Entry Text="{Binding Path=Persona.Direccion}" Placeholder="Ingresar Direccion" Keyboard="Default"/>
+        <Entry Text="{Binding Path=Persona.Imagen}" Placeholder="Ingresar Imagen" Keyboard="Default"/>
+        <Button Text="Guardar" Clicked="OnSaveButtonClicked" BackgroundColor="Blue"/>
+        <Button Text="Eliminar" Clicked="OnDeleteButtonClicked" BackgroundColor="Red"/>
+        <Button Text="Cancelar" Clicked="OnCancelButtonClicked" BackgroundColor="Gray"/>
+    </VerticalStackLayout>
+</ContentPage> 
